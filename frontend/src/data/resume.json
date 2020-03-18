@@ -1,0 +1,134 @@
+{
+    "tags": [
+
+    ],
+    "metrics": [
+        { "id": "languages", "name": "Languages", "count": 10 },
+        { "id": "stackoverflow-reach", "name": "Developers Reached", "count": 0 },
+        { "id": "stackoverflow-rep", "name": "Reputation", "count": 0 }
+    ],
+    "skills": [
+        { "name": "Software Development", "tag": "skill-software" },
+        { "name": "Software Architecture", "tag": "skill-software-architect" },
+        { "name": "Database Administration", "tag": "skill-db-admin" },
+        { "name": "Database Architecture", "tag": "skill-db-architecture" },
+        { "name": "Container Orchestration", "tag": "skill-container-orchestration" },
+        { "name": "Full Stack Development", "tag": "skill-fullstack" },
+        { "name": "Network Programming", "tag": "skill-network-programming" },
+        { "name": "IoT Development", "tag": "skill-iot" },
+        { "name": "Cloud Deployment", "tag": "skill-cloud-deploy" },
+        { "name": "DevOps", "tag": "skill-devops" },
+        { "name": "Agile", "tag": "skill-agile" }
+    ],
+    "languages": [
+        { "name": "C#", "proficiency": 5, "tag": "csharp" },
+        { "name": "C / C++", "proficiency": 5, "tag": "cpp" },
+        { "name": "Rust", "proficiency": 5, "tag": "rust" },
+        { "name": "Typescript", "proficiency": 5, "tag": "typescript" },
+        { "name": "Javascript", "proficiency": 5, "tag": "javascript" },
+        { "name": "Java", "proficiency": 3, "tag": "java" },
+        { "name": "VB.NET", "proficiency": 5, "tag": "vbnet" },
+        { "name": "Visual Basic", "proficiency": 4, "tag": "vb" },
+        { "name": "Python", "proficiency": 2, "tag": "python" },
+        { "name": "PHP", "proficiency": 2, "tag": "php" },
+        { "name": "SQL", "proficiency": 3, "tag": "sql" }
+    ],
+    "technology": [
+        { "name": ".NET Framework / .NET Core", "proficiency": 3 },
+        { "name": "ASP.NET Core MVC", "proficiency": 3 },
+        { "name": "ASP.NET", "proficiency": 2 },
+        { "name": "Entity Framework", "proficiency": 2 },
+        { "name": "Entity Framework Core", "proficiency": 2 },
+        { "name": "React", "proficiency": 3 },
+        { "name": "Vue", "proficiency": 2 },
+        { "name": "Stencil", "proficiency": 3 },
+        { "name": "SCSS", "proficiency": 3 },
+        { "name": "Docker", "proficiency": 2 },
+        { "name": "Kubernetes", "proficiency": 2 },
+        { "name": "VMWare", "proficiency": 2 },
+        { "name": "Hyper-V", "proficiency": 2 },
+        { "name": "Python", "proficiency": 1 }
+    ],
+    "tools": [
+        { "name": "Microsoft Visual Studio" }, 
+        { "name": "Visual Studio Code" },
+        { "name": "Docker" },
+        { "name": "Kubernetes" }
+    ],
+    "education": [
+        { 
+            "organization": "Davenport University",
+            "start": 2011,
+            "end": 2014,
+            "credential": "B.A.S. Computer Information Systems",
+            "description": "3.9 GPA (with high honors)"
+        }
+    ],
+    "experience": [
+        {
+            "organization": "Feyen Zylstra",
+            "location": "Grand Rapids, MI",
+            "start": 2012,
+            "end": 2020,
+            "title": "Senior Software Developer / Lead Architect",
+            "duration": "8 years"
+        },
+        {
+            "organization": "The National Aeronautics and Space Administration",
+            "location": "Grand Rapids, MI",
+            "start": 2017,
+            "end": 2017,
+            "title": "Consultant",
+            "duration": "1 month"
+        },
+        {
+            "organization": "Advanced Inspection Technologies",
+            "location": "Grand Rapids, MI",
+            "start": 2011,
+            "end": 2012,
+            "title": "Software Developer / Mobile Developer",
+            "duration": "2 years"
+        },
+        {
+            "organization": "The Stable Group",
+            "location": "Grand Rapids, MI",
+            "start": 2009,
+            "end": 2011,
+            "title": "Web Developer / Mobile Developer",
+            "duration": "2 years"
+        }
+    ],
+    "testimonials": [
+        {
+            "author": "John Becker",
+            "organization": "Feyen Zylstra",
+            "position": "Engineering Account Manager",
+            "quote": "Chris has an extensive knowledge in software development. He is comfortable in any development environment VB, C#, HTML, Web, Java, SQL, et al. He can develop smartphone applications on several platforms. He sets up formal architectures for his applications and develops using the most current standards and practices. His technical writing skills are excellent. His ability to explain complex information to non technical persons is also excellent. He is kind, personable, and a pleasure to work with."
+        },
+        {
+            "author": "Corey Miller",
+            "organization": "TEKsystems",
+            "quote": "Chris has volunteered his time teaching myself and a handful of my co-workers the inner workings of development to better understand the space. He has been a great teacher and is very detail oriented in his explanations. There has not been a question that we have asked that has thrown him off. He has a true expertise in the field and is constantly showing his passion in his work. All of the time he has spent with us has been free of charge and he has been happy to continue to meet with us to teach us more. I cannot recommend Chris highly enough from my professional interactions with him."
+        },
+        {
+            "author": "Rob Preston",
+            "organization": "The Stable Group",
+            "position": "CEO",
+            "quote": "Chris works and plays well with others! But on a serious note, Chris has been an integral part of our development team at The Stable Group, Inc. Developing our new platform he has taken the bull by the horns. His work ethic is impeccable and his dedication is outstanding. We look forward to a long term relationship with Chris here at The Stable Group."
+        }
+    ],
+    "regrets": [
+        {
+            "name": "RPG Toolkit Development System",
+            "start": 2004,
+            "end": 2020,
+            "description": "A travesty, really."
+        },
+        {
+            "name": "Life",
+            "start": 1989,
+            "end": 2020,
+            "description": "Why have I done this?!"
+        }
+    ]
+}

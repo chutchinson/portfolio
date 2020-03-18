@@ -1,0 +1,28 @@
+:host {
+    display: block;
+    contain: content;
+    background: white;
+    border: none;
+    border-radius: var(--border-radius);
+    z-index: 10;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+ui-icon {
+    margin-left: 1ch;
+}
+
+a {
+    display: block;
+    padding: var(--pad-md, --pad-md);
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    background: var(--primary);
+    color: var(--primary-text);
+}

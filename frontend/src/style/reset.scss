@@ -1,0 +1,25 @@
+div, p, span, a,
+h1, h2, h3, h4, h5, h6,
+ul, ol, li,
+blockquote,
+section {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.5em;
+    zoom: 1;
+}
+
+ul {
+    list-style: none;
+}
+
+a, 
+a:active,
+a:visited,
+a:focus,
+a:hover {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}

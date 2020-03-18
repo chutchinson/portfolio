@@ -1,0 +1,20 @@
+{
+    "name": "@cshutchinson/portfolio",
+    "private": true,
+    "scripts": {
+        "start": "npm install && npm run dev",
+        "dev": "stencil build --dev --watch --serve",
+        "build:prerender": "stencil build --prerender",
+        "build": "stencil build"
+    },
+    "dependencies": {
+        "@stencil/core": "1.9.2",
+        "@stencil/router": "1.0.1",
+        "@stencil/state-tunnel": "1.0.1"
+    },
+    "devDependencies": {
+        "@stencil/sass": "1.1.1",
+        "typescript": "3.8.3",
+        "workbox-build": "4.3.1"
+    }
+}
