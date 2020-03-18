@@ -7,7 +7,6 @@ const config: Config = {
         { type: 'www', baseUrl: 'https://www.cshutchinson.com' }
     ],
     globalStyle: 'src/style/index.scss',
-    globalScript: 'src/index.ts',
     plugins: [
         sass()
     ]
