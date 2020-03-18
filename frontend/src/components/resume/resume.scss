@@ -13,12 +13,22 @@ $brand-colors: (
     'stack-overflow': (rgb(244, 128, 36), #000)
 );
 
-:host {
+resume-app {
     width: 100%;
     display: block;
-    position: relative;
     background-color: var(--background);
-    padding-top: 160px;
+    padding-top: var(--nav-height);
+}
+
+/* HACK: offset scrolling on anchors so that it accounts for fixed nav */
+
+h2[id]::before {
+    display: block;
+    content: " ";
+    margin-top: calc(-1 * var(--nav-height));
+    height: var(--nav-height);
+    visibility: hidden;
+    pointer-events: none;
 }
 
 hr {
@@ -102,6 +112,10 @@ nav {
             height: 3px;
         }
     }
+}
+
+nav > ul > li.toggle {
+    display: none;
 }
 
 span {
@@ -251,8 +265,20 @@ a.button {
     }
 }
 
+.toggle {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
 
 @media only screen and (max-width: 680px) {
+    .collapsed > li:not(.toggle) {
+        display: none;
+        visibility: collapse;
+    }
+    ul.cards > li {
+        flex-basis: 100%;
+    }
     nav {
         & ul {
             flex-direction: column;
@@ -260,6 +286,9 @@ a.button {
         }
         & ul > li {
             flex-grow: 1;
+        }
+        & ul > li.toggle {
+            display: inline-block;
         }
         & ul > li > a {
             width: 100%;

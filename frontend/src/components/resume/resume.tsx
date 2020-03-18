@@ -1,34 +1,17 @@
-import { Component, Host, h } from '@stencil/core'
+import { Component, Host, State, Listen, h } from '@stencil/core'
 import { Section, Cards, List, Brand } from './components'
 import { resume } from './interface'
 
 @Component({
     tag: 'resume-app',
-    styleUrl: 'resume.scss',
-    shadow: true
+    styleUrl: 'resume.scss'
 })
 export class Resume {
 
-    private handleNav = (e: MouseEvent) => {
-        const target = e.target as HTMLAnchorElement
-        if (target?.hash?.length > 0) {
-            e.preventDefault()
-            const el = document.getElementById(target.hash.substring(1))
-            if (el) {
-                window.history.scrollRestoration = 'manual'
-                window.focus()
-                window.scroll({
-                    behavior: 'smooth', 
-                    left: 0,
-                    top: el.offsetTop
-                })
-                return false
-            }
-        }
-        return false
-    }
+    @State() private menuCollapsed = true
 
     public render() {
+        const linksClass = this.menuCollapsed ? 'collapsed' : undefined
         return (
             <Host>
                 <scroll-top />
@@ -45,14 +28,17 @@ export class Resume {
                             </button>
                         </div> */}
                     </header>
-                    <ul>
-                        <li><a href="#about" onClick={this.handleNav}>About Me</a></li>
-                        <li><a href="#skills" onClick={this.handleNav}>Skills</a></li>
-                        <li><a href="#tech" onClick={this.handleNav}>Technology</a></li>
-                        <li><a href="#education" onClick={this.handleNav}>Education</a></li>
-                        <li><a href="#experience" onClick={this.handleNav}>Experience</a></li>
-                        <li><a href="#testimonials" onClick={this.handleNav}>Testimonials</a></li>
-                        <li><a href="#contact" onClick={this.handleNav}>Contact</a></li>
+                    <ul class={linksClass}>
+                        <li class="toggle" onClick={this.handleToggleNav}>
+                            <a><ui-icon glyph="chevron-down" /></a>
+                        </li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#tech">Technology</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
                 <main>
@@ -119,6 +105,15 @@ export class Resume {
                 </main>
             </Host>
         )
+    }
+
+    private handleToggleNav = (e: MouseEvent) => {
+        this.menuCollapsed = !this.menuCollapsed
+    }
+
+    @Listen('hashchange', { target: 'window'})
+    protected handleHashChange(e: Event) {
+        this.menuCollapsed = true
     }
 
     private get skills() {
