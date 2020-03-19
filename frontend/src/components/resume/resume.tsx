@@ -82,14 +82,14 @@ export class Resume {
                         {this.testimonials}
                     </Section> 
                     <Section id="contact" title="Contact">
-                        <form method="post" action="https://formspree.io/mpzlpzvg">
+                        <form method="post" action="//api.cshutchinson.com/api/contact">
                             <label>
                                 <span>Email</span>
-                                <input name="_replyto" type="email" />
+                                <input name="replyTo" type="email" required />
                             </label>
                             <label>
                                 <span>Subject</span>
-                                <select name="subject">
+                                <select name="subject" required>
                                     <option selected>Request Contact</option>
                                     <option>Hire</option>
                                     <option>Other</option>
@@ -97,7 +97,8 @@ export class Resume {
                             </label>
                             <label>
                                 <span>Message</span>
-                                <textarea name="message" rows={10} cols={100} />
+                                <textarea name="message" rows={10} cols={100} required 
+                                    minLength={10} maxLength={500} />
                             </label>
                             <input type="submit" value="Send" />
                         </form>

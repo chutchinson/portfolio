@@ -152,6 +152,11 @@ form {
     padding: var(--pad-lg);
     padding-top: 0;
 
+    > label {
+        display: block;
+        width: 100%;
+    }
+
     & input, 
     & button, 
     & textarea, 
