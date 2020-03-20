@@ -11,7 +11,7 @@ export class App {
             <stencil-router>
                 <stencil-route-switch>
                     <stencil-route url="/dashboard" component="ui-dashboard" exact />
-                    <stencil-route url="/" component="resume-app" />
+                    <stencil-route url="/" component="ui-resume" />
                 </stencil-route-switch>
             </stencil-router>
         )

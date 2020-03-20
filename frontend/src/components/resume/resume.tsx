@@ -3,7 +3,7 @@ import { Section, Cards, List, Brand } from './components'
 import { resume } from './interface'
 
 @Component({
-    tag: 'resume-app',
+    tag: 'ui-resume',
     styleUrl: 'resume.scss'
 })
 export class Resume {

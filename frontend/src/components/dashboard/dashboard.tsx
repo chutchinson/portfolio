@@ -31,6 +31,7 @@ export class Dashboard {
     }
 
     public async componentDidLoad() {
+        document.title = 'Trash'
         const service = new CityService()
         this.state = await service.wastePickup()
         this.loading = false
