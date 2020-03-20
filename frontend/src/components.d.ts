@@ -7,9 +7,14 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { IconKind, } from "./components/icon/interface";
 export namespace Components {
+    interface AppRoot {
+    }
     interface ResumeApp {
     }
     interface ScrollTop {
+    }
+    interface UiDashboard {
+        "loading": boolean;
     }
     interface UiIcon {
         "glyph": string;
@@ -17,6 +22,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
+    }
+    var HTMLAppRootElement: {
+        prototype: HTMLAppRootElement;
+        new (): HTMLAppRootElement;
+    };
     interface HTMLResumeAppElement extends Components.ResumeApp, HTMLStencilElement {
     }
     var HTMLResumeAppElement: {
@@ -29,6 +40,12 @@ declare global {
         prototype: HTMLScrollTopElement;
         new (): HTMLScrollTopElement;
     };
+    interface HTMLUiDashboardElement extends Components.UiDashboard, HTMLStencilElement {
+    }
+    var HTMLUiDashboardElement: {
+        prototype: HTMLUiDashboardElement;
+        new (): HTMLUiDashboardElement;
+    };
     interface HTMLUiIconElement extends Components.UiIcon, HTMLStencilElement {
     }
     var HTMLUiIconElement: {
@@ -36,23 +53,32 @@ declare global {
         new (): HTMLUiIconElement;
     };
     interface HTMLElementTagNameMap {
+        "app-root": HTMLAppRootElement;
         "resume-app": HTMLResumeAppElement;
         "scroll-top": HTMLScrollTopElement;
+        "ui-dashboard": HTMLUiDashboardElement;
         "ui-icon": HTMLUiIconElement;
     }
 }
 declare namespace LocalJSX {
+    interface AppRoot {
+    }
     interface ResumeApp {
     }
     interface ScrollTop {
+    }
+    interface UiDashboard {
+        "loading"?: boolean;
     }
     interface UiIcon {
         "glyph"?: string;
         "kind"?: IconKind;
     }
     interface IntrinsicElements {
+        "app-root": AppRoot;
         "resume-app": ResumeApp;
         "scroll-top": ScrollTop;
+        "ui-dashboard": UiDashboard;
         "ui-icon": UiIcon;
     }
 }
@@ -60,8 +86,10 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "resume-app": LocalJSX.ResumeApp & JSXBase.HTMLAttributes<HTMLResumeAppElement>;
             "scroll-top": LocalJSX.ScrollTop & JSXBase.HTMLAttributes<HTMLScrollTopElement>;
+            "ui-dashboard": LocalJSX.UiDashboard & JSXBase.HTMLAttributes<HTMLUiDashboardElement>;
             "ui-icon": LocalJSX.UiIcon & JSXBase.HTMLAttributes<HTMLUiIconElement>;
         }
     }

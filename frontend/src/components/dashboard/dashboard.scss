@@ -1,0 +1,96 @@
+@import '../../style/reset.scss';
+
+:host {
+    --background: #ddd;
+    --color: #333;
+    --card-size: 40vw;
+    --card-font-size: 6vw;
+    --card-background: #bbb;
+    --card-background-dark: #999;
+    --card-positive-background: #4caf50;
+    --card-positive-color: #fff;
+    --spinner-size: 30vw;
+
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+:host([loading]) {
+    ul {
+        display: none;
+    }
+    div.loading {
+        opacity: 1;
+    }
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+@keyframes spin {
+    from { transform: rotateZ(0deg); }
+    to { transform: rotateZ(360deg); }
+}
+
+div.loading {
+    display: block;
+    width: var(--spinner-size);
+    height: var(--spinner-size);
+    font-size: var(--spinner-size);
+    text-align: center;
+    opacity: 0;
+    margin-top: -0.5ch;
+}
+
+div.loading > ui-icon {
+    animation: spin 3s linear infinite;
+}
+
+div.card {
+    animation: loading 2s linear infinite reverse;
+    border-radius: 2px;
+    display: flex;
+    width: var(--card-size);
+    height: var(--card-size);
+    max-width: 80vw;
+    max-height: 80vh;
+    flex-direction: column;
+    background-color: var(--card-background);
+    font-size: var(--card-font-size);
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+}
+
+div.card.positive {
+    animation: none;
+    --card-background: --card-positive-background;
+    --color: --card-positive-color;
+}
+
+div.card > ui-icon {
+    font-size: 2em;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    :host {
+        --card-size: 40vh;
+        --card-font-size: 6vh;
+    }
+    ul {
+        flex-direction: column;
+        width: auto;
+        height: 100%;
+    }
+}
