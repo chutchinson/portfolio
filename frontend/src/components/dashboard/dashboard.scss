@@ -48,12 +48,12 @@ div.loading {
     height: var(--spinner-size);
     font-size: var(--spinner-size);
     text-align: center;
-    opacity: 0;
     margin-top: -0.5ch;
 }
 
 div.loading > ui-icon {
     animation: spin 3s linear infinite;
+    opacity: 0.70;
 }
 
 div.card {

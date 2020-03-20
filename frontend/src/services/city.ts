@@ -2,6 +2,10 @@ import * as luxon from 'luxon'
 
 const wastePickupUrl  = 'https://api.cshutchinson.com/api/wastePickup'
 
+const delay = async (duration: number) => {
+    return new Promise((resolve) => setTimeout(resolve, duration))
+}
+
 export interface WastePickup {
     local: boolean,
     trash: boolean,
@@ -62,7 +66,13 @@ export class CityService {
             }
         }
 
-        return await remote()
+        const timeout = delay(5000)
+        const result = remote()
+        const race = Promise.race([timeout, result])
+
+        return race != timeout
+            ? await result
+            : await local()
     }
 
 }
