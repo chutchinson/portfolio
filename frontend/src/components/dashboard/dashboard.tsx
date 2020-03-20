@@ -1,9 +1,10 @@
 import { Component, h, State, Host, Prop } from '@stencil/core'
 import { CityService, WastePickup } from '../../services/city'
 
-const Card = (props: { title: string, icon: string, state: boolean }) => {
+const Card = (props: { title: string, icon: string, state: boolean, local: boolean }) => {
     const className = {
         'card': true,
+        'local': props.local,
         'positive': props.state
     }
     return (
@@ -37,12 +38,12 @@ export class Dashboard {
 
     public render() {
         const { loading } = this
-        const { trash, recycling } = this.state!
+        const { local, trash, recycling } = this.state!
         return (
             <Host>
                 <ul>
-                    <Card title="trash" icon="trash" state={trash} />
-                    <Card title="recycling" icon="recycle" state={recycling} />
+                    <Card title="trash" icon="trash" state={trash} local={local} />
+                    <Card title="recycling" icon="recycle" state={recycling} local={local} />
                 </ul>
                 { loading 
                     ? 

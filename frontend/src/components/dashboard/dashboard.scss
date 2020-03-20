@@ -60,6 +60,7 @@ div.card {
     animation: loading 2s linear infinite reverse;
     border-radius: 2px;
     display: flex;
+    position: relative;
     width: var(--card-size);
     height: var(--card-size);
     max-width: 80vw;
@@ -70,12 +71,28 @@ div.card {
     user-select: none;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 div.card.positive {
     animation: none;
     --card-background: --card-positive-background;
     --color: --card-positive-color;
+}
+
+div.card.local::after {
+    content: '';
+    display: block;
+    width: 1em;
+    height: 1em;
+    background: #fbc02d;
+    opacity: 0.75;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: 
+        translate(0.5em, 0.5em) 
+        rotate(45deg);
 }
 
 div.card > ui-icon {
