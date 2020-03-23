@@ -67,6 +67,7 @@ div.card {
     max-height: 80vh;
     flex-direction: column;
     background-color: var(--card-background);
+    color: var(--color);
     font-size: var(--card-font-size);
     user-select: none;
     justify-content: center;
@@ -76,8 +77,8 @@ div.card {
 
 div.card.positive {
     animation: none;
-    --card-background: --card-positive-background;
-    --color: --card-positive-color;
+    --card-background: var(--card-positive-background);
+    --color: var(--card-positive-color);
 }
 
 div.card.local::after {
