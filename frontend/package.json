@@ -11,7 +11,7 @@
         "@stencil/core": "2.3.0",
         "@stencil/router": "1.0.1",
         "@stencil/state-tunnel": "1.0.1",
-        "luxon": "1.25.0"
+        "luxon": "1.28.1"
     },
     "devDependencies": {
         "@types/luxon": "1.25.1",
